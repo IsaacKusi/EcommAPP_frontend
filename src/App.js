@@ -1,10 +1,15 @@
 
+import Nav from "./components/bars/Nav";
+import Home from "./components/home/Home";
+
 const App = () => {
 
   return (
-    <div>
-      <p className="text-red-700">Type something here</p>
-    </div>
+    <>
+      <Nav/>
+      <Home/>
+      
+    </>
   );
 }
 
