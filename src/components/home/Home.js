@@ -1,16 +1,55 @@
 
 import HomeCards from "./homeitems/HomeCards";
+import PopularCategoriesCard from "./homeitems/PopularCategoriesCard";
+import PopularProductCard from "./homeitems/PopularProductCard";
+import VendorCard from "./homeitems/VendorCard";
+import ReviewCarousel from "./homeitems/ReviewsCarousel";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+
     return <>
         <main className=" container mt-3">
+            {/* latest products */}
             <div className="flex justify-between font-semibold">
-            <h3 className=" text-[1.5rem] font-sans">Latest Products</h3>
-            <button className="bg-[#333333] text-white px-1 rounded text-sm">View All Products</button>
+                <h3 className=" text-[1.3rem] font-sans">Latest Products</h3>
+                <Link to = '/all_products'> <button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
             </div>
             <div className="flex flex-wrap mt-2 ">
-                <HomeCards/>
+                <HomeCards />
             </div>
+
+            {/* popular categories */}
+
+            <div className="flex justify-between font-semibold mt-2">
+                <h3 className=" text-[1.3rem] font-sans">Popular Categories</h3>
+              <Link to = '/categories'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32 ">View All Categories</button></Link>
+            </div>
+            <div className="flex flex-wrap mt-2 ">
+                <PopularCategoriesCard />
+            </div>
+
+            {/* popular products */}
+
+            <div className="flex justify-between font-semibold mt-2">
+                <h3 className=" text-[1.3rem] font-sans">Popular Products</h3>
+                <Link to = '#'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
+            </div>
+            <div className="flex flex-wrap mt-2 ">
+                <PopularProductCard />
+            </div>
+            {/* popular vendors */}
+
+            <div className="flex justify-between font-semibold mt-2">
+                <h3 className=" text-[1.3rem] font-sans">Popular Vendors</h3>
+                <Link to = '#'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Vendors</button></Link>
+            </div>
+            <div className="flex flex-wrap mt-2 ">
+                <VendorCard />
+            </div>
+            {/* reviews Carousel */}
+            <ReviewCarousel />
+            <hr />
         </main>
     </>
 }
