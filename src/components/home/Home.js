@@ -33,7 +33,7 @@ const Home = () => {
 
             <div className="flex justify-between font-semibold mt-2">
                 <h3 className=" text-[1.3rem] font-sans">Popular Products</h3>
-                <Link to = '#'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
+                <Link to = '/all_products'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
             </div>
             <div className="flex flex-wrap mt-2 ">
                 <PopularProductCard />
