@@ -3,23 +3,23 @@ import Nav from "./components/bars/Nav";
 import Footer from "./components/home/homeitems/Footer";
 import Home from "./components/home/Home";
 import Categories from "./components/categories/Categories";
-import Category_Products from "./components/products/Category_Products";
+import CategoryProducts from "./components/products/CategoryProducts";
 import AllProducts from "./components/products/AllProducts";
 import ProductDetails from "./components/products/ProuctDetails";
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
 
   return (
     <>
       <Nav />
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path= '/categories' component={Categories}/>
-        <Route path = '/category_products' component = {Category_Products}/>
-        <Route path = '/all_products' component = {AllProducts}/>
-        <Route path = '/product_details/:id' component = {ProductDetails}/>
-      </Switch> 
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path= '/categories' element={<Categories/>}/>
+        <Route path = '/category_products' element = {<CategoryProducts/>}/>
+        <Route path = '/all_products' element = {<AllProducts/>}/>
+        <Route path = '/product_details' element = {<ProductDetails/>}/>
+      </Routes> 
       <Footer/>
     </>
   );
@@ -28,4 +28,6 @@ const App = () => {
 export default App;
 
 
-// in react-router-dom 6, the switch is changed to Routes and component is changed to element.
+// in react-router-dom 6, the switch is changed to Routes and component is changed to element, the link is changed to
+// NavLink and the redirects are changed to Navigate, you dont need to use exact since the use of * in the parent
+// make use of it.
