@@ -4,7 +4,7 @@ import PopularCategoriesCard from "./homeitems/PopularCategoriesCard";
 import PopularProductCard from "./homeitems/PopularProductCard";
 import VendorCard from "./homeitems/VendorCard";
 import ReviewCarousel from "./homeitems/ReviewsCarousel";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
 
@@ -13,7 +13,7 @@ const Home = () => {
             {/* latest products */}
             <div className="flex justify-between font-semibold">
                 <h3 className=" text-[1.3rem] font-sans">Latest Products</h3>
-                <Link to = '/all_products'> <button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
+                <NavLink to = '/all_products'> <button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></NavLink>
             </div>
             <div className="flex flex-wrap mt-2 ">
                 <HomeCards />
@@ -23,7 +23,7 @@ const Home = () => {
 
             <div className="flex justify-between font-semibold mt-2">
                 <h3 className=" text-[1.3rem] font-sans">Popular Categories</h3>
-              <Link to = '/categories'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32 ">View All Categories</button></Link>
+              <NavLink to = '/categories'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32 ">View All Categories</button></NavLink>
             </div>
             <div className="flex flex-wrap mt-2 ">
                 <PopularCategoriesCard />
@@ -33,7 +33,7 @@ const Home = () => {
 
             <div className="flex justify-between font-semibold mt-2">
                 <h3 className=" text-[1.3rem] font-sans">Popular Products</h3>
-                <Link to = '/all_products'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></Link>
+                <NavLink to = '/all_products'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Products</button></NavLink>
             </div>
             <div className="flex flex-wrap mt-2 ">
                 <PopularProductCard />
@@ -42,7 +42,7 @@ const Home = () => {
 
             <div className="flex justify-between font-semibold mt-2">
                 <h3 className=" text-[1.3rem] font-sans">Popular Vendors</h3>
-                <Link to = '#'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Vendors</button></Link>
+                <NavLink to = '#'><button className="bg-[#333333] text-white px-1 py-1 rounded text-[0.8rem] w-32">View All Vendors</button></NavLink>
             </div>
             <div className="flex flex-wrap mt-2 ">
                 <VendorCard />
