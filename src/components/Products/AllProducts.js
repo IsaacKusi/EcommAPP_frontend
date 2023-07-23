@@ -1,5 +1,6 @@
 import ProductItem from "./ProductItem";
 
+
 const AllProducts = () => {
     return <>
         <main className="container">
@@ -7,7 +8,7 @@ const AllProducts = () => {
                 <h3 className=" text-[1.3rem] font-sans">All Products</h3>
             </div>
             <div className="mt-2">
-                <ProductItem />
+             <ProductItem /> 
             </div>
         </main>
     </>
