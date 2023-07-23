@@ -1,9 +1,10 @@
 import rolex from '../images/Rolex.jpeg'
 import { FaCartPlus, FaHeart } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom'
 
 const ProductItem = ()=>{
     return <>
-        <main className='border border-2  w-[13rem] rounded-md mr-5 mb-5 '>
+     <NavLink to='/product_details'> <main className='border border-2  w-[13rem] rounded-md mr-5 mb-5 '>
             <div className='flex item-center place-content-center py-1'>
                 <img src={rolex} alt="rolex.png" width='200px'  className='rounded' />
             </div>
@@ -13,7 +14,7 @@ const ProductItem = ()=>{
                 <FaCartPlus color='white' className='text-[1.2rem] cursor-pointer ' title='Add to Cart' />
                 <FaHeart color='red' className='text-[1.2rem] cursor-pointer ml-2 ' title='Add to Wishlist ' />
             </footer>
-        </main>
+        </main> </NavLink> 
     </>
 }
 

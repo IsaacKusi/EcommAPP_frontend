@@ -19,7 +19,6 @@ const ReviewCarousel=()=> {
      customer: 'Theophilus',
      rating : 5
     },
-
     {
      review: 'right on spot',
      customer: 'Daniella',
