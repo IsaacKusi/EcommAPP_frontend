@@ -5,7 +5,8 @@ import Home from "./components/home/Home";
 import Categories from "./components/categories/Categories";
 import CategoryProducts from "./components/products/CategoryProducts";
 import AllProducts from "./components/products/AllProducts";
-import ProductDetails from "./components/products/ProuctDetails";
+import ProductDetails from "./components/products/ProductDetails";
+import Checkout from "./components/products/Checkout";
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path = '/category_products' element = {<CategoryProducts/>}/>
         <Route path = '/all_products' element = {<AllProducts/>}/>
         <Route path = '/product_details' element = {<ProductDetails/>}/>
+        <Route path = '/checkout' element = {<Checkout/>}/>
       </Routes> 
       <Footer/>
     </>
