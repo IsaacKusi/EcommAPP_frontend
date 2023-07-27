@@ -2,28 +2,29 @@
 import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import rolex from '../images/Rolex.jpeg'
+import rol from '../images/Rolex.jpeg'
 
-const RelatedProductCarousel = () => {
+const Related = () => {
+    
     const slides = [
         {
-            image: rolex,
+            image: rol,
             number: 1
         },
         {
-            image: rolex,
+            image: rol,
             number: 2
         },
         {
-            image: rolex,
+            image: rol,
             number: 3
         },
         {
-            image: rolex,
+            image: rol,
             number: 4
         },
         {
-            image: rolex,
+            image: rol,
             number: 5
         },
     ];
@@ -49,7 +50,7 @@ const RelatedProductCarousel = () => {
     return (
         <div className=' m-auto py-16 px-4 relative group bg-[#333333] mb-5 rounded'>
             <div className='w-full h-full rounded-2xl bg-center bg-cover duration-500  text-white flex item-center place-content-center'>
-                <img src={slides[currentIndex].image} alt="rolex.png" width='200px' className='rounded '  />
+                <img src={slides[currentIndex].image} alt="rolex.png" width='200px' className='rounded '  />  
                 <p className='text-white'>{slides[currentIndex].number}</p>
             </div>
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -74,4 +75,4 @@ const RelatedProductCarousel = () => {
     );
 }
 
-export default RelatedProductCarousel;
+export default Related;

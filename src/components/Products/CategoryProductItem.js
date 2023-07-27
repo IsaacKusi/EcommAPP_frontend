@@ -1,6 +1,7 @@
 
 import rolex from '../images/Rolex.jpeg'
 
+
 const CategoryProductItem = ()=>{
     return <>
      <main className='border border-2  w-[13rem] rounded-md mr-5 mb-5 '>
